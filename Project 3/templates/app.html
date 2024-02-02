@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Display</title>
+</head>
+<body>
+    <h1>National Data</h1>
+    {{ national_data.to_html() | safe }}
+
+    <h1>State Data</h1>
+    {{ state_data.to_html() | safe }}
+</body>
+</html>
