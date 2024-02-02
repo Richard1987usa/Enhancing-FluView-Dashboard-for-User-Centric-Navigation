@@ -17,6 +17,9 @@ def index():
     national_data = pd.DataFrame(list(national_data_collection.find()))
     state_data = pd.DataFrame(list(state_data_collection.find()))
 
+    national_data = national_data.drop(columns=['_id'], errors='ignore')
+    state_data = state_data.drop(columns=['_id'], errors='ignore')
+
     # Pass the data to the template
     return render_template('app.html', national_data=national_data, state_data=state_data)
 
