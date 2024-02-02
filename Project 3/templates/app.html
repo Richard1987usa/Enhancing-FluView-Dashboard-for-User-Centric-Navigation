@@ -8,12 +8,13 @@
     <style>
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: fit-content;
         }
 
         th, td {
             padding: 8px;
             text-align: left;
+            
         }
 
         th {
@@ -23,9 +24,9 @@
 </head>
 <body>
     <h1>National Data</h1>
-    {{ national_data.to_html() | safe }}
+    {{ national_data.to_html(classes='table', index=False) | safe }}
 
     <h1>State Data</h1>
-    {{ state_data.to_html() | safe }}
+    {{ state_data.to_html(classes='table', index=False) | safe }}
 </body>
 </html>
